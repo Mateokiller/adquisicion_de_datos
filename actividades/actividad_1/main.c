@@ -38,9 +38,9 @@ int main() {
     adc_select_input(0);
     while(true) {
         // Leer NTC
-        
+        adc_value = adc_read
         // Calculo temperatura
-        
+        temperatura = 1 / (log(1 / (4095. / adc_value - 1)) / beta + 1.0 / 298.15) - 273.15;
         // Limpio LCD
         lcd_clear();
         // Variable para el string
@@ -48,7 +48,7 @@ int main() {
         // Creo string
         
         // Imprimo string en segunda fila
-        lcd_string(str);
+        printf("temperatura %.2f C \n",temperatura);
         // Espero 500 ms
         sleep_ms(500);
     }
