@@ -31,11 +31,11 @@ int main() {
     // Inicializacion del LCD
     lcd_init();
     // Inicializo ADC
-
+    acd_init();
     // Inicializo GPIO26 como entrada analogica
-
+    adc_gpio_init(26);
     // Selecciono canal analogico
-
+    adc_select_input(0);
     while(true) {
         // Leer NTC
         
